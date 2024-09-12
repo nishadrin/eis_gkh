@@ -21,7 +21,7 @@ class CreateCalculateRentViewSet(APIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid(raise_exception=False):
+        if serializer.is_valid():
             calculate_rent = serializer.save()
             calculation_rent.delay(calculate_rent.id)
 
