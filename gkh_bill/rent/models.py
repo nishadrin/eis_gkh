@@ -5,7 +5,7 @@ class CalculateRent(models.Model):
     """Модель расчета квартплаты."""
 
     house = models.ForeignKey(
-        'House',
+        'house.House',
         verbose_name='Адресс',
         on_delete=models.CASCADE,
     )
@@ -31,12 +31,12 @@ class Rent(models.Model):
     )
 
     flat = models.ForeignKey(
-        'Flat',
+        'house.Flat',
         on_delete=models.CASCADE,
         verbose_name='Квартира',
     )
     calculate_rent = models.ForeignKey(
-        'CalculateRent',
+        CalculateRent,
         on_delete=models.CASCADE,
         verbose_name='Расчет кварплаты',
     )

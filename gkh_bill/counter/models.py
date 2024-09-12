@@ -16,12 +16,12 @@ class WaterCounter(models.Model):
     )
 
     tariff = models.ForeignKey(
-        'Tariff',
+        'tariff.Tariff',
         verbose_name='Тариф',
         on_delete=models.CASCADE,
     )
     flat = models.ForeignKey(
-        'Flat',
+        'house.Flat',
         verbose_name='Квартира',
         on_delete=models.CASCADE,
     )

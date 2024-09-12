@@ -8,7 +8,7 @@ class House(models.Model):
     address = models.CharField(max_length=255, verbose_name='Адрес', )
 
     maintenance_tariff = models.ForeignKey(
-        'Tariff',
+        'tariff.Tariff',
         verbose_name='Тариф за содержание общего имущества',
         on_delete=models.CASCADE,
     )
