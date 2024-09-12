@@ -11,7 +11,7 @@ class WaterCounter(models.Model):
         help_text='Введите показания',
     )
     date = models.DateField(
-        auto_now_add=True,
+        auto_now=True,
         verbose_name='Дата показаний',
     )
 
