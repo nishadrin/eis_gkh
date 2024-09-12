@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import WaterCounter
+from .models import WaterCounter
 
 
 @admin.register(WaterCounter)

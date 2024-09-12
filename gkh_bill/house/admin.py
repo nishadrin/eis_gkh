@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import House, Flat
+from .models import House, Flat
 
 
 @admin.register(Flat)
@@ -10,8 +10,8 @@ class FlatAdmin(admin.ModelAdmin):
         'area',
         'house',
     )
-    search_fields = ('flat',)
-    list_filter = ('flat',)
+    search_fields = ('number', 'house', )
+    list_filter = ('number', 'house', )
 
 
 @admin.register(House)
