@@ -44,6 +44,7 @@ class Rent(models.Model):
     class Meta:
         ordering = ('flat',)
         verbose_name = 'Квартплата'
+        default_related_name = 'rents'
         verbose_name_plural = 'Квартплаты'
 
     def __str__(self):

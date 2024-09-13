@@ -9,7 +9,8 @@ class WaterCounterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WaterCounter
-        fields = ('value', 'tariff', 'flat', )
+        fields = ('value', 'tariff', 'flat', 'date', )
+        read_only_fields = ('date', )
 
     def create(self, validated_data) -> WaterCounter:
         """

@@ -18,7 +18,6 @@ class House(models.Model):
         verbose_name = 'Дом'
         verbose_name_plural = 'Дома'
 
-
     def __str__(self):
         return self.address
 
@@ -39,7 +38,7 @@ class Flat(models.Model):
     house = models.ForeignKey(
         House,
         on_delete=models.CASCADE,
-        related_name='flat',
+        related_name='flats',
     )
 
     class Meta:

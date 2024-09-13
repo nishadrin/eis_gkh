@@ -28,7 +28,7 @@ class WaterCounter(models.Model):
 
     class Meta:
         ordering = ('tariff',)
-        default_related_name = 'water_counter'
+        default_related_name = 'water_counters'
         verbose_name = 'Счетчик воды'
         verbose_name_plural = 'Счетчики воды'
 
